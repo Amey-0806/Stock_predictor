@@ -1,0 +1,200 @@
+body {
+    /* Subtle background gradient from the image */
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0 10px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    line-height: 1;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+main {
+    padding: 0 20px;
+}
+
+.instruction {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* --- Input Area Styling --- */
+.input-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#tickerInput {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid black;
+    width: 200px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+}
+
+.add-button {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    margin-left: -2px; /* Overlap border for a clean look */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.1s;
+}
+
+.add-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Ticker List Styling --- */
+.ticker-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    min-height: 30px; /* Reserve space for added tickers */
+    margin-bottom: 30px;
+}
+
+.ticker-tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.ticker-tag:hover {
+    background-color: #d0d0d0;
+}
+
+/* --- Report Button Styling --- */
+.generate-button {
+    background-color: #4CAF50; /* A bright green */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.generate-button:hover {
+    background-color: #45a049;
+}
+
+.generate-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.disclaimer-small {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* --- Footer and Report Output --- */
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #333;
+    border-top: 1px solid #ccc;
+}
+
+.report-output {
+    min-height: 50px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    font-family: monospace;
+}
+
+/* ... (All previous CSS content) ... */
+
+/* --- Report Output & Loading Styling --- */
+
+.report-output {
+    min-height: 50px;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    font-family: monospace;
+    /* Add transition for smoother content switch */
+    transition: opacity 0.5s; 
+}
+
+/* New CSS for the Loading State */
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    color: #4CAF50;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Simple Spinner animation */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

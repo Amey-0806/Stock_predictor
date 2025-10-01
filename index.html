@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodgy Dave's Stock Predictions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dodgy Dave's</h1>
+            <h2>Stock Predictions</h2>
+        </header>
+
+        <main>
+            <p class="instruction">Add up to 3 stock tickers below to get a super accurate stock predictions report 👇</p>
+
+            <div class="input-area">
+                <input type="text" id="tickerInput" placeholder="MSFT" maxlength="5" oninput="this.value = this.value.toUpperCase()">
+                <button id="addTickerBtn" class="add-button">+</button>
+            </div>
+            
+            <div id="tickerList" class="ticker-list">
+                </div>
+
+            <button id="generateReportBtn" class="generate-button">GENERATE REPORT</button>
+
+            <p class="disclaimer-small">Always correct 15% of the time!</p>
+
+            <div id="reportOutput" class="report-output">
+                </div>
+        </main>
+
+        <footer>
+            &copy; This is not real financial advice!
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
