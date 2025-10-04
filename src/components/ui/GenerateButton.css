@@ -1,0 +1,64 @@
+/* Generate Button */
+.generate-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+}
+
+.generate-button:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.generate-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.generate-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.generate-button.generating {
+  background: #ff9800;
+  cursor: not-allowed;
+}
+
+.generate-button.generating:hover {
+  background: #ff9800;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Accuracy Text */
+.accuracy-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
